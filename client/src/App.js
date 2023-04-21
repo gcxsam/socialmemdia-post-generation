@@ -170,7 +170,7 @@ function App() {
           }
         };
 
-        const response1 = await fetch("http://localhost:5000/twitter", {
+        const response1 = await fetch("https://socialmedia-content-server.onrender.com/twitter", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -205,7 +205,7 @@ function App() {
          }
        };
 
-      const response=await fetch("http://localhost:5000/linkedin", {
+      const response=await fetch("https://socialmedia-content-server.onrender.com/linkedin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -33,7 +33,7 @@ app.post("/twitter", async (req, res) => {
     });
 
     const twitterClient = client.readWrite;
-    console.log(req.body.prompt);
+  
     const tweet = async () => {
       try {
         await twitterClient.v2.tweet(req.body.prompt);
