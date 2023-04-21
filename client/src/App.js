@@ -11,8 +11,13 @@ function App() {
   const inputEmoji = useRef();
   const inputWords = useRef();
 
-  const [loading, setLoading] = useState(false);
+  const inputTitle1 = useRef();
+  const inputHashtag1 = useRef();
+  const inputEmoji1 = useRef();
+  const inputWords1 = useRef();
 
+  const [loading, setLoading] = useState(false);
+  const [loading1, setLoading1] = useState(false);
   //
   const [inputValue, setInputValue] = useState("");
 
@@ -30,6 +35,7 @@ function App() {
 
   async function handleSend() {
     const title = inputTitle.current.value;
+    console.log(title)
     const hashtag = inputHashtag.current.value;
     const emoji = inputEmoji.current.value;
     const words = inputWords.current.value;
@@ -88,20 +94,20 @@ function App() {
   }
 
   async function handleSend1() {
-    const title = inputTitle.current.value;
-    const hashtag = inputHashtag.current.value;
-    const emoji = inputEmoji.current.value;
-    const words = inputWords.current.value;
-    setLoading(true);
+    const title = inputTitle1.current.value;
+    const hashtag = inputHashtag1.current.value;
+    const emoji = inputEmoji1.current.value;
+    const words = inputWords1.current.value;
+    setLoading1(true);
 
     if (title == "") {
       alert("Please input title");
-      setLoading(false);
+      setLoading1(false);
     }
 
     if (words == "") {
       alert("Please input words");
-      setLoading(false);
+      setLoading1(false);
     }
 
     if (title != "" && words != "") {
@@ -142,7 +148,7 @@ function App() {
       var result = data.choices[0].message.content;
       document.getElementById("result1").value = result;
       console.log(result);
-      setLoading(false);
+      setLoading1(false);
     }
   }
 
@@ -198,7 +204,7 @@ function App() {
            modal.style.display = "none";
          }
        };
-       
+
       const response=await fetch("http://localhost:5000/linkedin", {
         method: "POST",
         headers: {
@@ -425,7 +431,7 @@ function App() {
                   <label>Post title*</label>
                   <input
                     type="text"
-                    ref={inputTitle}
+                    ref={inputTitle1}
                     class="form-control col"
                     placeholder="Enter post title"
                     required
@@ -438,7 +444,7 @@ function App() {
                     class="form-control"
                     name="hashtag"
                     id="hashtag"
-                    ref={inputHashtag}
+                    ref={inputHashtag1}
                     required
                   >
                     <option value="Yes">Yes</option>
@@ -452,7 +458,7 @@ function App() {
                     class="form-control"
                     name="emoji"
                     id="emoji"
-                    ref={inputEmoji}
+                    ref={inputEmoji1}
                     required
                   >
                     <option value="Yes">Yes</option>
@@ -466,7 +472,7 @@ function App() {
                     type="number"
                     min="5"
                     max="200"
-                    ref={inputWords}
+                    ref={inputWords1}
                     class="form-control col"
                     placeholder="Enter number of words"
                     required
@@ -476,7 +482,7 @@ function App() {
                 <div class="row mt-4">
                   <div class="col-12 text-center mx-auto">
                     <button
-                      disabled={loading}
+                      disabled={loading1}
                       class="btn btn-secondary"
                       onClick={handleSend1}
                     >
