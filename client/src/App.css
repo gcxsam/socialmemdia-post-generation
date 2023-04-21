@@ -1,0 +1,94 @@
+.btn{
+    cursor: pointer;
+}
+
+.twitter-btn{
+    border:1px solid #03A9F4 !important;
+    background: white;
+    color:#03A9F4;
+}
+
+.twitter-btn{
+    border:1px solid #0077B7 !important;
+    background: white;
+    color:#0077B7;
+}
+
+
+button{
+    border: none !important;
+    outline: none !important;
+}
+
+.nav-link{
+    background: none;
+    border-radius: 0px !important;
+}
+
+.nav-link.active{
+    /* background: none !important; */
+    background:none !important;
+    color: black !important;
+    border-bottom: 2px solid blue !important;
+}
+
+
+ul{
+    margin: 1rem;
+}
+
+.tab-content{
+    margin: 1rem;
+}
+
+.img-logo{
+    margin-left: 0.5rem;
+    width: 24px;
+    height: 24px;
+}
+
+/* Style the button */
+#openModalBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Style the modal */
+  .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+  }
+
+  /* Modal content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 16px;
+    border: none;
+    width: 90%;
+    min-width: 19rem;
+    max-width: 30rem;
+    /* width: 100%; */
+    opacity: 90%;
+    display: flex;
+    align-items: center;
+
+  }
